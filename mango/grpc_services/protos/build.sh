@@ -7,7 +7,7 @@ declare -a services=("users")
 # $ python -m pip install grpcio-tools
 
 for SERVICE in "${services[@]}"; do
-    DESTDIR='gen-py'
+    DESTDIR='gen_py'
     mkdir -p $DESTDIR
     python3 -m grpc_tools.protoc \
         --proto_path=$SERVICE/ \
